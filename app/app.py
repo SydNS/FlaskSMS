@@ -1,3 +1,4 @@
+from flask import Flask, jsonify, request
 from app import app
 
 
@@ -17,7 +18,7 @@ def hello():
     return f'Hello, {name}!'
 
 
-@app.route('/add', app.methods['POST'])
+@app.route('/add', request.methods['POST'])
 def add():
     data = app.request.get_json()
     a = data['a']
