@@ -18,13 +18,13 @@ def hello():
     return f'Hello, {name}!'
 
 
-@app.route('/add', request.methods['POST'])
-def add():
-    data = app.request.get_json()
-    a = data['a']
-    b = data['b']
-    result = a + b
-    return app.jsonify({'result': result})
+# @app.route('/add', request.methods['POST'])
+# def add():
+#     data = app.request.get_json()
+#     a = data['a']
+#     b = data['b']
+#     result = a + b
+#     return app.jsonify({'result': result})
 
 
 if __name__ == '__main__':
